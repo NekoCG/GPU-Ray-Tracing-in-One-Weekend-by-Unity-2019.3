@@ -31,6 +31,12 @@ public class FocusCamera : MonoBehaviour
     if (thisCamera == null)
       thisCamera = GetComponent<Camera>();
 
+    if(Input.GetMouseButtonDown(0))
+    {
+      // #TODO: focusDistance Change to WorldPos where the mouse points to. (Collide with Camera Rotation)
+      // var ray = thisCamera.ScreenPointToRay(Input.mousePosition); //Wrong, no Collider
+      
+    }
     var theta = thisCamera.fieldOfView * Mathf.Deg2Rad;
     var halfHeight = math.tan(theta * 0.5f);
     var halfWidth = thisCamera.aspect * halfHeight;
