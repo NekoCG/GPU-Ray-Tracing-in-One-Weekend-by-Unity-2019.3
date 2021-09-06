@@ -24,7 +24,7 @@ public static class BuildFinalScene
       for (var b = -11; b < 11; ++b)
       {
         var chooseMat = _mt19937.genrand_real1();
-        var center = new Vector3(a + 0.9f * (float)_mt19937.genrand_real1(),0.2f,b + 0.9f * (float)_mt19937.genrand_real1());
+        var center = new Vector3(a + 0.9f * (float)_mt19937.genrand_real1(),1.0f,b + 0.9f * (float)_mt19937.genrand_real1());
         if ((center - new Vector3(4.0f, 0.2f, 0.0f)).magnitude > 0.9f)
         {
           if (chooseMat < 0.8)
