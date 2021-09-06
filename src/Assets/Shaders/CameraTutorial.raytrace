@@ -56,11 +56,11 @@ void CameraRayGenShader()
   finalColor = float4(sqrt(finalColor.r), sqrt(finalColor.g), sqrt(finalColor.b), finalColor.a);
 
   _PRNGStates[PRNGIndex] = PRNGStates;
-  if (_FrameIndex > 1)
-  {
-    float a = 1.0f / (float)_FrameIndex;
-    finalColor = _OutputTarget[dispatchIdx] * (1.0f - a) + finalColor * a;
-  }
+  // if (_FrameIndex > 1)
+  // {
+  //   float a = 1.0f / (float)_FrameIndex;
+  //   finalColor = _OutputTarget[dispatchIdx] * (1.0f - a) + finalColor * a;
+  // }
 
   _OutputTarget[dispatchIdx] = finalColor;
 }

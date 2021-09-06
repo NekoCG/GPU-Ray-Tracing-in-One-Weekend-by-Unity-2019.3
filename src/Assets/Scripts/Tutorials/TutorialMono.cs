@@ -18,7 +18,7 @@ public class TutorialMono : MonoBehaviour
   private RenderPipelineAsset _oldRenderPipelineAsset;
 
   /// <summary>
-  /// Unity Start.
+  /// Unity Start.s
   /// </summary>
   public IEnumerator Start()
   {

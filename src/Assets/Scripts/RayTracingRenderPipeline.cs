@@ -152,9 +152,16 @@ public class RayTracingRenderPipeline : RenderPipeline
   /// </summary>
   private void BuildAccelerationStructure()
   {
-    if (SceneManager.Instance == null || !SceneManager.Instance.isDirty) return;
+    // if (SceneManager.Instance == null || !SceneManager.Instance.isDirty) return;
+      if (SceneManager.Instance == null ) return;
 
     _accelerationStructure.Dispose();
+
+      // var settings = new RayTracingAccelerationStructure.RASSettings();
+      // // settings.layerMask = UpdateLayers;
+      // settings.managementMode = RayTracingAccelerationStructure.ManagementMode.Automatic;
+      // settings.rayTracingModeMask = RayTracingAccelerationStructure.RayTracingModeMask.Everything;
+
     _accelerationStructure = new RayTracingAccelerationStructure();
 
     SceneManager.Instance.FillAccelerationStructure(ref _accelerationStructure);
