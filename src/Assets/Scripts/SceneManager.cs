@@ -68,6 +68,17 @@ public class SceneManager : MonoBehaviour
         }
     }
 
+    public void UpdateAccelerationStructure(ref RayTracingAccelerationStructure accelerationStructure)
+    {
+        foreach (var r in renderers)
+        {
+            if (r)
+            {
+                accelerationStructure.UpdateInstanceTransform(r);
+            }
+        }
+    }
+
     /// <summary>
     /// initialize
     /// </summary>
